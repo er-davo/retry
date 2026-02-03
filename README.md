@@ -14,7 +14,7 @@ The package provides:
 ## Installation
 
 ```bash
-go get github.com/your-org/retry
+go get github.com/er-davo/retry
 ```
 
 ---
