@@ -1,5 +1,7 @@
 # retry
 
+[![Tests](https://github.com/er-davo/retry/actions/workflows/go.yaml/badge.svg)](https://github.com/er-davo/retry/actions/workflows/go.yaml)
+
 A small Go package for executing operations with retries.
 
 The package provides:
