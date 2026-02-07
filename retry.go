@@ -6,6 +6,18 @@ import (
 	"time"
 )
 
+type noRetrier struct{}
+
+// Do executes the provided AttemptFunc once.
+func (n noRetrier) Do(ctx context.Context, f AttemptFunc) error {
+	return f(0)
+}
+
+// NoRetry returns a Retrier that executes the operation once.
+func NoRetry() Retrier {
+	return &noRetrier{}
+}
+
 // RetryOption configures a Retrier.
 type RetryOption func(*retrier)
 
